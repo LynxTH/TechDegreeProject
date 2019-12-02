@@ -38,6 +38,11 @@ var Year;
 
 
 var quoteList = [
+
+     {quotes: 'GitHub and Visual Studio had a bad First Date', 
+     source: "Me",
+     Year: 2019}, 
+
     {quotes: 'WOOO!!', 
      source: "-Ellen, Queen of Durham",
      Year: 2018},
