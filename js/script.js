@@ -75,7 +75,8 @@ function getRandomQuote () {
 console.log(getRandomQuote());
 
 function printQuote () {
-
+  
+    var displayRandomQuote = getRandomQuote(); 
     var HTMLString = '<p class = "qoute">' + getRandomQuote + '</p>';
     HTMLString += '<p class = "source"> + [quoteList].quotes' + '</p>';
     if ([quoteList].citation) {
@@ -84,18 +85,15 @@ function printQuote () {
     if ([quoteList].Year) {
         HTMLString += '<span class = "Year">' + quote[quoteList].Year + '</p>';
     }
-    message += '<h2>' + getRandomQuote() + '</h2>';
+    message += '<h2>' + displayRandomQuote + '</h2>';
  console.log(HTMLString);   
- return getRandomQuote();
 }
 printQuote();
-console.log(printQuote());
-
-
+return getRandomQuote();
 
 function print(message) {
   var quoteBoxDiv = document.getElementById("quoteBox");
-  quoteBoxDiv.innerHTML = message;
+  quoteBoxDiv.HTMLString = message;
 }
 
 print(message);
