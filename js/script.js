@@ -1,59 +1,22 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
-/*** 
- * `quotes` array 
-***/
-
-
-
-/***
- * `getRandomQuote` function
-***/
-
-
-
-/***
- * `printQuote` function
-***/
-
-
-
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
-
-/*var message = '';
-var quotes;
-var source;
-var citation;
-var Year;*/
-
+/* Fxn=Function
+*/
 
 var quotes = [
 
-     {quote: 'GitHub and Visual Studio had a bad First Date', 
-     source: "Me",
-     year: 2019}, 
-
     {quote: 'WOOO!!', 
      source: "-Ellen, Queen of Durham",
-     year: 2018},
+     year: 2018,
+     context: "Motivation"},
 
     {quote: "Im your huckleberry", 
      source: "-Doc Holiday",
      citation: "Tombstone",
-     year: 1993},
+     year: 1993,
+     context:"Classic Western Movie"},
 
     {quote: "In a dark place we find oursleves,  and a little more knowledge lights our way.",
-    source: '-Yoda'},
+    source: '-Yoda, ',
+    context: "Star Wars Movie"},
 
     {quote: "No one likes a grumpy muffin.",
      source: '-Ellen, Queen of Durham',
@@ -76,7 +39,7 @@ function getRandomQuote () {
   return getRandomNumber;
  }
  console.log(getRandomQuote());
-
+//Function above pulls from the array, a random quote. It does not display it.//
 
 function printQuote () {
   
@@ -89,20 +52,13 @@ function printQuote () {
     if (displayRandomQuote.year) {
         HTMLString += '<span class = "year">' + displayRandomQuote.year + '</span> </p>';
     }
-   // message += '<h2>' + displayRandomQuote + '</h2>';
+    if (displayRandomQuote.context) {
+        HTMLString += '<span class = "context">' + displayRandomQuote.context + '</span> </p>';
+  }
    
  document.getElementById('quote-box').innerHTML = HTMLString;
 }
-
-/*printQuote();
-return getRandomQuote();
-
-function print(message) {
-  var quoteBoxDiv = document.getElementById("quoteBox");
-  quoteBoxDiv.HTMLString = message;
-}
-
-print(message);*/
-
+/*Fxn above pulls random quote from first fxn and checks for 'citation' and 'year'. 
+Then adds them to the string via the HTMLstring variable */
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
