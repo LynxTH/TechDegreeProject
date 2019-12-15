@@ -8,28 +8,30 @@ var quotes = [
     {quote: 'WOOO!!', 
      source: "-Ellen, Queen of Durham",
      year: 2018,
-     context: "Motivation"},
+     context: " Motivation"},
 
     {quote: "Im your huckleberry", 
      source: "-Doc Holiday",
      citation: "Tombstone",
      year: 1993,
-     context:"Classic Western Movie"},
+     context:" Classic Western Movie"},
 
     {quote: "In a dark place we find oursleves,  and a little more knowledge lights our way.",
     source: '-Yoda, ',
-    context: "Star Wars Movie"},
+    context: " Star Wars Movie "},
 
     {quote: "No one likes a grumpy muffin.",
      source: '-Ellen, Queen of Durham',
      year: 2019},
 
     {quote: "Nothing will work unless you do", 
-     source: 'Maya Angelou'},
+     source: '-Maya Angelou'},
 
     {quote: "I learned that courage is not the absence of fear but the triumph over it",
-     source: 'Nelson Mandela'},
+     source: '-Nelson Mandela'},
 ]
+
+//Spaces added to context tag for clarity
 
 console.log(quotes);
 
@@ -54,12 +56,12 @@ function printQuote () {
         HTMLString += '<span class="citation">' + displayRandomQuote.citation + '</span>';
     }
     if (displayRandomQuote.year) {
-        HTMLString += '<span class = "year">' + displayRandomQuote.year + '</span> </p>';
+        HTMLString += '<span class = "year">' + displayRandomQuote.year + '</span>';
     }
     if (displayRandomQuote.context) {
-        HTMLString += '<span class = "context">' + displayRandomQuote.context + '</span> </p>';
-  }
-   
+        HTMLString += '<span class = "context">' + displayRandomQuote.context + '</span>';
+    }
+   HTMLString += '</p>';
  document.getElementById('quote-box').innerHTML = HTMLString;
 }
 /*Fxn above pulls random quote from first fxn and checks for 'citation' and 'year'. 
