@@ -31,7 +31,9 @@ var quotes = [
 
 console.log(quotes);
 
-
+var intervalPrintID = setInterval(printQuote, 5000);
+var intervalID = setInterval(getRandomQuote, 5000); 
+//Interval timers above, no parameters included
 
 function getRandomQuote () {
 
@@ -60,5 +62,7 @@ function printQuote () {
 }
 /*Fxn above pulls random quote from first fxn and checks for 'citation' and 'year'. 
 Then adds them to the string via the HTMLstring variable */
+
+
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
