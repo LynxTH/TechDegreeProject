@@ -1,4 +1,6 @@
-/* Fxn=Function
+/* Abbreviations in comments:
+ Fxn = Function
+ Inv = Interval
 */
 
 var quotes = [
@@ -33,7 +35,7 @@ console.log(quotes);
 
 var intervalPrintID = setInterval(printQuote, 5000);
 var intervalID = setInterval(getRandomQuote, 5000); 
-//Interval timers above, no parameters included
+//Inv timers above, no parameters included
 
 function getRandomQuote () {
 
@@ -41,7 +43,7 @@ function getRandomQuote () {
   return getRandomNumber;
  }
  console.log(getRandomQuote());
-//Function above pulls from the array, a random quote. It does not display it.//
+//Fxn above pulls from the array, a random quote. It does not display it.//
 
 function printQuote () {
   
@@ -62,7 +64,5 @@ function printQuote () {
 }
 /*Fxn above pulls random quote from first fxn and checks for 'citation' and 'year'. 
 Then adds them to the string via the HTMLstring variable */
-
-
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
