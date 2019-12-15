@@ -65,14 +65,17 @@ var quotes = [
     {quote: "I learned that courage is not the absence of fear but the triumph over it",
      source: 'Nelson Mandela'},
 ]
-console.log(getRandomQuote());
+
+console.log(quotes);
+
+
 
 function getRandomQuote () {
 
   var getRandomNumber = quotes[Math.floor(Math.random() * quotes.length)];
   return getRandomNumber;
  }
-// getRandomQuote();
+ console.log(getRandomQuote());
 
 
 function printQuote () {
@@ -87,9 +90,10 @@ function printQuote () {
         HTMLString += '<span class = "year">' + displayRandomQuote.year + '</span> </p>';
     }
    // message += '<h2>' + displayRandomQuote + '</h2>';
- //console.log(HTMLString);   
+   
  document.getElementById('quote-box').innerHTML = HTMLString;
 }
+
 /*printQuote();
 return getRandomQuote();
 
